@@ -299,25 +299,6 @@ export default class MoviesDAO {
       // TODO Ticket: Get Comments
       // Implement the required pipeline.
       const pipeline = [
-        //   {
-        //     '$lookup': {
-        //       'from': 'comments',
-        //       'localField': '_id',
-        //       'foreignField': 'movie_id',
-        //       'as': 'comments',
-        //       'pipeline': [
-        //         {
-        //           '$sort': {
-        //             'date': -1
-        //           },
-        //       ],
-        //     }
-        //   }, {
-        //     '$match': {
-        //       '_id': new ObjectId(id)
-        //     }
-        //   }
-        // ]
         {
           $match: {
             _id: new ObjectId(id),
